@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roots & Legacy Jamaica – Heritage Research & Land Guidance</title>
+  <meta name="description" content="Roots & Legacy Jamaica helps families trace their Jamaican ancestry, build family trees, craft Heritage Books, and navigate property & land guidance for the diaspora." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --green:#007A36; --gold:#FCD116; --black:#111111; --bg:#0c0c0c; --muted:#6b7280; --card:#121416; --ring: rgba(252, 209, 22, .45); }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:#e9eef2;font-family:Mulish,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;scroll-behavior:smooth}
+    img{max-width:100%;display:block}
+    a{color:var(--gold);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(12,12,12,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #1f2937}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand h1{font-family:"Playfair Display",serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.3px}
+    nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    nav a{color:#e9eef2;font-weight:600;padding:10px 12px;border-radius:10px}
+    nav a:hover{background:#1f2937}
+    .cta{background:linear-gradient(90deg,var(--gold),var(--green));color:#0b0b0b;padding:10px 14px;border-radius:999px;font-weight:800;border:none;cursor:pointer}
+    .cta:hover{filter:brightness(1.05)}
+    .mobile-toggle{display:none}
+    @media (max-width:860px){ nav ul{display:none} .mobile-toggle{display:inline-flex;gap:6px;align-items:center;color:#e9eef2;background:#1f2937;border:1px solid #333;padding:8px 12px;border-radius:10px} .mobile-open nav ul{display:flex;flex-direction:column;gap:0;background:#0f1115;position:absolute;left:20px;right:20px;top:62px;border:1px solid #222;border-radius:14px;overflow:hidden} .mobile-open nav li a{display:block;padding:14px 16px;border-bottom:1px solid #1c1f26} .mobile-open nav li:last-child a{border-bottom:none} }
+    .hero{position:relative;isolation:isolate}
+    .hero .bg{position:absolute;inset:0;z-index:-1;background:radial-gradient(1200px 600px at 20% 10%, rgba(252,209,22,.18), transparent 60%), radial-gradient(900px 500px at 80% 0%, rgba(0,122,54,.18), transparent 60%), linear-gradient(180deg, #0c0c0c, #0a0d0a)}
+    .hero-wave{position:absolute;inset:auto 0 -1px 0;height:70px;background: linear-gradient(90deg, rgba(0,0,0,.0), rgba(0,0,0,.15) 40%, rgba(0,0,0,.0)), url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140" preserveAspectRatio="none"><path fill="%23007A36" fill-opacity="0.18" d="M0,64L60,69.3C120,75,240,85,360,96C480,107,600,117,720,106.7C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/></svg>') center/cover; }
+    .hero .wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:center;padding:72px 0 48px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid #2a2f39;border-radius:999px;color:#d9e1e8;background:#0f1115}
+    .title{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:14px 0 10px}
+    .lead{color:#d3dae1;max-width:52ch}
+    .hero-card{background:linear-gradient(180deg, #121416 0%, #0d0f13 100%);border:1px solid #1e2430;border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+    .hero-card ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+    .hero-card li{display:flex;gap:12px;align-items:flex-start}
+    .badge{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:rgba(252,209,22,.15);border:1px solid rgba(252,209,22,.35)}
+    .actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid #273041;background:#12161d;color:#e9eef2;font-weight:700}
+    .btn--gold{background:linear-gradient(90deg,var(--gold),#ffd84a);color:#171717;border:0}
+    .btn--ghost{border-color:#2b323e}
+    @media (max-width:980px){.hero .wrap{grid-template-columns:1fr}}
+    section{padding:68px 0;border-top:1px solid #15181f}
+    h2.section-title{font-family:"Playfair Display",serif;font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 18px}
+    p.section-lead{color:#cbd5df;max-width:70ch}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:960px){.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:680px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid #212734;border-radius:16px;padding:18px;transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+    .card h3{margin:6px 0 8px;font-size:1.1rem}
+    .card p{color:#cbd5df}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    @media (max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.steps{grid-template-columns:1fr}}
+    .step{background:var(--card);border:1px solid #212734;border-radius:16px;padding:16px}
+    .step .num{font-weight:900;color:var(--gold);font-size:1.2rem}
+    .cta-band{background:linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.45)), linear-gradient(90deg,var(--green),var(--gold));padding:36px;border-radius:18px;display:flex;gap:18px;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,.08)}
+    .cta-band h3{margin:0;font-size:1.3rem}
+    footer{padding:32px 0 60px;border-top:1px solid #15181f;color:#cbd5df}
+    .foot-grid{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .tag{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#0f1115;border:1px solid #212734}
+    .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:#0e1014;border:1px solid #1f2633;color:#d7dee6}
+    .pill svg{opacity:.9}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Roots & Legacy Jamaica",
+    "url":"https://rootsandlegacyja.example",
+    "description":"Heritage research, family trees, Heritage Books, and land & property guidance for the Jamaican diaspora.",
+    "email":"rootsandlegacyjamaica@gmail.com",
+    "areaServed":"Worldwide",
+    "sameAs":["https://instagram.com/rootsandlegacyjamaica"],
+    "logo":"/assets/logo.jpg"
+  }
+  </script>
+</head>
+<body>
+  <header id="top">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="Roots & Legacy Jamaica logo" style="width:42px;height:42px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px rgba(255,255,255,.06)"/>
+        <h1>Roots & Legacy <span style="color:var(--gold)">Jamaica</span></h1>
+      </div>
+      <nav>
+        <button class="mobile-toggle" aria-controls="primary-nav" aria-expanded="false" id="menuBtn">☰ Menu</button>
+        <ul id="primary-nav" aria-label="Primary">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#contact">Start Your Research</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="bg"></div>
+    <div class="container wrap">
+      <div>
+        <span class="eyebrow"><span>🇯🇲</span> Heritage Research & Land Guidance</span>
+        <h2 class="title">Reconnect with your Jamaican <span style="color:var(--gold)">roots</span>. Preserve your <span style="color:var(--green)">legacy</span>.</h2>
+        <p class="lead">We trace your family history through Jamaican records, oral stories, and diaspora archives to build verified family trees and craft beautiful Heritage Books. We also guide you through land & property pathways—clearly and ethically.</p>
+        <div class="actions">
+          <a class="btn btn--gold" href="#contact">Book a Free Discovery Call</a>
+          <a class="btn btn--ghost" href="#services">Explore Services</a>
+        </div>
+        <div class="actions" style="margin-top:8px">
+          <span class="pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="white" stroke-opacity=".8"/></svg> Diaspora‑friendly • Global</span>
+          <span class="pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-opacity=".8"/><path d="M12 7v5l4 2" stroke="white" stroke-opacity=".8"/></svg> Timely & transparent</span>
+        </div>
+      </div>
+      <div class="hero-card" aria-labelledby="hc-title">
+        <h3 id="hc-title" class="sr">What you receive</h3>
+        <ul>
+          <li><span class="badge">📖</span> <div><strong>Heritage Book</strong> – a designed narrative with documents, photos & maps.</div></li>
+          <li><span class="badge">🌳</span> <div><strong>Family tree</strong> – visual chart (3–6+ generations, where records allow).</div></li>
+          <li><span class="badge">🧭</span> <div><strong>Research dossier</strong> – sources, transcripts, and a citations log.</div></li>
+          <li><span class="badge">🏡</span> <div><strong>Land & property guidance</strong> – clear next steps and vetted referrals.</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero-wave"></div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-lead">Choose a focused research track or combine both for a complete Roots & Legacy journey.</p>
+      <div class="grid" style="margin-top:16px">
+        <article class="card">
+          <div class="pill" style="margin-bottom:8px">🌱 Roots – Family Research</div>
+          <h3>Family Tree Package</h3>
+          <p>3–5 generations traced where records permit (RGD, parish & church registers, migration records). Includes interviews, verification and a designed tree.</p>
+          <ul>
+            <li>✔ Verified records & citations</li>
+            <li>✔ Oral history interviews</li>
+            <li>✔ Designed visual family tree</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="pill" style="margin-bottom:8px">📘 Legacy – Heritage Book</div>
+          <h3>Heritage Book</h3>
+          <p>Your family’s story brought to life: timelines, maps, photos, and cultural context—beautifully designed as a keepsake for future generations.</p>
+          <ul>
+            <li>✔ Narrative + photos & maps</li>
+            <li>✔ Migration & parish context</li>
+            <li>✔ Print‑ready & digital files</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="pill" style="margin-bottom:8px">🏡 Land & Property Guidance</div>
+          <h3>Title, Family Land & Purchase</h3>
+          <p>Understand Jamaican land systems, clarify family land situations, and get a clear referral pathway to licensed attorneys, surveyors, and realtors.</p>
+          <ul>
+            <li>✔ Discovery session & checklist</li>
+            <li>✔ Records & due‑diligence guide</li>
+            <li>✔ Vetted professional referrals</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="container">
+      <h2 class="section-title">Benefits of Working With Us</h2>
+      <div class="grid" style="margin-top:12px">
+        <div class="card"><h3>⏳ Save Time</h3><p>We know the right archives and processes—skip dead ends and guesswork.</p></div>
+        <div class="card"><h3>📜 Accuracy</h3><p>We follow rigorous proof standards and document every finding.</p></div>
+        <div class="card"><h3>📂 Hidden Records</h3><p>Beyond online databases: parish books, land deeds, immigration lists.</p></div>
+        <div class="card"><h3>🌴 Local Insight</h3><p>Jamaica‑based researchers with cultural and regional expertise.</p></div>
+        <div class="card"><h3>📖 Story‑Driven</h3><p>Not just names—your family’s narrative, milestones, and maps.</p></div>
+        <div class="card"><h3>🔎 Brick‑Walls</h3><p>Specialists at solving tough lineage problems and name collisions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <h2 class="section-title">Our Process</h2>
+      <p class="section-lead">Clear, collaborative, and transparent—designed for diaspora families.</p>
+      <div class="steps" style="margin-top:12px">
+        <div class="step"><div class="num">1</div><h3>Discovery Call</h3><p>Understand your goals and known family details; outline scope.</p></div>
+        <div class="step"><div class="num">2</div><h3>Research Plan</h3><p>We map sources (RGD, parishes, archives) and timeline deliverables.</p></div>
+        <div class="step"><div class="num">3</div><h3>Fieldwork & Proof</h3><p>Document retrieval, interviews, cross‑verification, and citations.</p></div>
+        <div class="step"><div class="num">4</div><h3>Deliver & Guide</h3><p>Family Tree, Heritage Book, and land/pathway guidance—plus next steps.</p></div>
+      </div>
+      <div class="cta-band" style="margin-top:22px">
+        <h3>Ready to start your Roots & Legacy journey?</h3>
+        <a class="cta" href="#contact">Book a Free Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="grid" style="margin-top:10px">
+        <article class="card"><h3>How long does research take?</h3><p>Most projects run 4–10 weeks depending on scope, record availability, and response times from archives.</p></article>
+        <article class="card"><h3>Do you work with DNA results?</h3><p>Yes. We can incorporate your DNA reports to add regional context and help resolve brick‑walls.</p></article>
+        <article class="card"><h3>Are you a law firm?</h3><p>No—we provide research & guidance and connect you with licensed attorneys, surveyors, and realtors as needed.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-lead">Email us and we’ll respond with a brief intake form and a link to book a discovery call.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h3>📧 Email</h3>
+          <p><a href="mailto:rootsandlegacyjamaica@gmail.com">rootsandlegacyjamaica@gmail.com</a></p>
+          <h3>📸 Instagram</h3>
+          <p><a href="https://instagram.com/rootsandlegacyjamaica" target="_blank" rel="noopener">@rootsandlegacyjamaica</a></p>
+        </div>
+        <div class="card">
+          <h3>Quick Message</h3>
+          <form id="msgForm" onsubmit="event.preventDefault(); this.reset(); alert('Thanks! We\'ll be in touch via email.');">
+            <label class="sr" for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required style="width:100%;margin-bottom:10px;padding:12px;border-radius:10px;border:1px solid #273041;background:#0f1115;color:#e9eef2;outline:none;box-shadow:0 0 0 0 var(--ring)" onfocus="this.style.boxShadow='0 0 0 4px var(--ring)';" onblur="this.style.boxShadow='none'" />
+
+            <label class="sr" for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Your email" required style="width:100%;margin-bottom:10px;padding:12px;border-radius:10px;border:1px solid #273041;background:#0f1115;color:#e9eef2;outline:none;box-shadow:0 0 0 0 var(--ring)" onfocus="this.style.boxShadow='0 0 0 4px var(--ring)';" onblur="this.style.boxShadow='none'" />
+
+            <label class="sr" for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what you\'re hoping to discover…" style="width:100%;margin-bottom:12px;padding:12px;border-radius:10px;border:1px solid #273041;background:#0f1115;color:#e9eef2;resize:vertical;outline:none;box-shadow:0 0 0 0 var(--ring)" onfocus="this.style.boxShadow='0 0 0 4px var(--ring)';" onblur="this.style.boxShadow='none'"></textarea>
+
+            <button class="cta" type="submit">Send Message</button>
+            <p style="color:#9aa3ad;margin-top:8px;font-size:.9rem">* This demo form doesn’t send email. Click the email link to contact us directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot-grid">
+      <div class="brand" style="gap:10px">
+        <img src="assets/logo.jpg" alt="Roots & Legacy Jamaica logo" style="width:28px;height:28px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(255,255,255,.06)"/>
+        <strong>Roots & Legacy Jamaica</strong>
+      </div>
+      <div class="tag">📧 rootsandlegacyjamaica@gmail.com</div>
+      <div class="tag">📸 @rootsandlegacyjamaica</div>
+      <div style="opacity:.7">© <span id="yr"></span> Roots & Legacy Jamaica. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn?.addEventListener('click',()=>{
+      document.querySelector('header')?.classList.toggle('mobile-open');
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+    });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
