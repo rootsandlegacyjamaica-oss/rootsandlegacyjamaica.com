@@ -1,13 +1,20 @@
-Roots & Legacy Jamaica – Static Website
---------------------------------------
-Files:
-- index.html
-- assets/logo.jpg
-- _headers (optional Netlify headers)
+Portlandia production-ready static website
 
-Deploy on Netlify:
-1) Go to https://app.netlify.com/ and Sign up / Log in.
-2) Click "Add new site" → "Deploy manually".
-3) Drag-and-drop this folder OR upload the ZIP.
-4) After deploy, click "Site settings" → "Change site name" and set a subdomain (e.g., rootsandlegacyjamaica).
-5) Final URL will be: https://<yoursitename>.netlify.app
+Files included:
+- index.html
+- heritage.html
+- land-legacy.html
+- experiences.html
+- about.html
+- contact.html
+- styles.css
+- script.js
+- assets/
+
+Publishing:
+1. Upload the folder contents to Netlify, Vercel, or any static host.
+2. Netlify Forms is already configured on contact.html.
+3. Point your domain to the deployed site.
+
+Recommended:
+- Replace any image later by swapping the file in /assets while keeping the same filename.
