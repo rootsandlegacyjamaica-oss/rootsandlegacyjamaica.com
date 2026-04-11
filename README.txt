@@ -11,13 +11,15 @@ Files included:
 - styles.css
 - script.js
 - booking-config.js / booking.js
+- contact-form.js
 - package.json (Netlify Functions + Resend)
 - netlify/functions/cal-booking-notification.mjs
+- netlify/functions/contact-notification.mjs
 - assets/
 
 Publishing:
-1. Upload the folder contents to Netlify, Vercel, or any static host.
-2. Netlify Forms is already configured on contact.html.
+1. Upload the folder contents to Netlify (recommended for functions + Resend).
+2. Contact submissions use the Netlify function contact-notification (Resend), not Netlify Forms.
 3. Point your domain to the deployed site.
 
 Recommended:
@@ -25,10 +27,10 @@ Recommended:
 Added: pricing.html and Pricing nav link.
 
 
-Netlify Forms + Analytics
--------------------------
-- The contact form uses Netlify Forms (name, email, phone, location, interest, message). The field name "email" lets Netlify set Reply-To to the visitor when you enable email notifications.
-- In Netlify: Site configuration → Forms → Notifications → add email rootsandlegacyjamaica@gmail.com (or your preferred inbox). Submission emails will use the visitor’s email as Reply-To so you can reply directly to them.
+Contact form (Resend) + Analytics
+---------------------------------
+- Submissions POST to /.netlify/functions/contact-notification, which emails rootsandlegacyjamaica@gmail.com (override with CONTACT_NOTIFY_EMAIL) via Resend. Reply-To is the visitor’s email so you can reply in one click.
+- A short confirmation is also sent to the visitor (disable with CONTACT_SEND_CONFIRMATION=false). Uses the same RESEND_API_KEY and RESEND_FROM as booking emails.
 - Thank-you page: thank-you.html — also routed as /thank-you via netlify.toml.
 - Google Analytics 4 (gtag.js) is included on every page (Measurement ID G-S02Q9D3HHQ).
 
