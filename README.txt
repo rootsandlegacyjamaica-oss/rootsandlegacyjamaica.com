@@ -27,8 +27,9 @@ Added: pricing.html and Pricing nav link.
 
 Netlify Forms + Analytics
 -------------------------
-- The contact form is now configured for Netlify Forms.
-- A thank-you page has been added at thank-you.html.
+- The contact form uses Netlify Forms (name, email, phone, location, interest, message). The field name "email" lets Netlify set Reply-To to the visitor when you enable email notifications.
+- In Netlify: Site configuration → Forms → Notifications → add email rootsandlegacyjamaica@gmail.com (or your preferred inbox). Submission emails will use the visitor’s email as Reply-To so you can reply directly to them.
+- Thank-you page: thank-you.html — also routed as /thank-you via netlify.toml.
 - Google Analytics 4 (gtag.js) is included on every page (Measurement ID G-S02Q9D3HHQ).
 
 Cal.com booking + Google Calendar

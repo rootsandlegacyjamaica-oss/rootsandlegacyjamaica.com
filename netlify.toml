@@ -2,6 +2,12 @@
   command = "npm install"
   publish = "."
 
+# Pretty URLs / path quirks: always serve the thank-you page at both paths
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
