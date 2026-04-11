@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S02Q9D3HHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S02Q9D3HHQ');
+</script>
+<title>Book a consultation — Portlandia</title>
+<meta name="description" content="Schedule a consultation with Roots and Legacy Jamaica — Portlandia."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="top-line"></div>
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Roots and Legacy Jamaica Portlandia logo"/>
+      <div class="brand-text">
+        <strong>Portlandia</strong>
+        <span>Roots and Legacy Jamaica</span>
+      </div>
+    </a>
+    <nav class="links"><a class="" href="index.html">Home</a><a class="" href="heritage.html">Heritage Research</a><a class="" href="land-legacy.html">Land & Legacy</a><a class="" href="experiences.html">Cultural Experiences</a><a class="" href="pricing.html">Pricing</a><a class="" href="about.html">About</a><a class="active" href="booking.html">Book</a><a class="" href="contact.html">Contact</a></nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <button class="btn btn-secondary mobile-toggle" data-mobile-toggle>Menu</button>
+      <a class="btn btn-primary" href="contact.html">Get in Touch</a>
+    </div>
+  </div>
+  <div class="container mobile-links" data-mobile-links><a href="index.html">Home</a><a href="heritage.html">Heritage Research</a><a href="land-legacy.html">Land & Legacy</a><a href="experiences.html">Cultural Experiences</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="booking.html">Book</a><a href="contact.html">Contact</a></div>
+</header>
+
+
+<section class="page-hero">
+  <div class="container">
+    <div class="card" style="margin-bottom:20px">
+      <div class="eyebrow">Book</div>
+      <h2>Schedule a consultation.</h2>
+      <p style="color:var(--muted);max-width:52ch">Choose a time that works for you. You’ll receive a confirmation by email. Prefer to write first? Use our <a href="contact.html" style="color:var(--gold);font-weight:600">contact form</a>.</p>
+    </div>
+    <div id="cal-booking-setup-hint" class="card booking-setup-hint" hidden>
+      <p><strong>Set your Cal.com link.</strong> Open <code>booking-config.js</code> in this project, set <code>CAL_BOOKING_URL</code> to your event URL from Cal.com (Event type → Share → copy link), save, and redeploy.</p>
+    </div>
+    <div class="booking-embed-wrap">
+      <iframe id="cal-booking-iframe" title="Book a consultation with Portlandia" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Portlandia logo"/>
+      <small>Roots and Legacy Jamaica — Portlandia</small>
+    </div>
+    <small>© 2026 Portlandia. All rights reserved.</small>
+  </div>
+</footer>
+<script src="booking-config.js"></script>
+<script src="booking.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
