@@ -1,2 +1,9 @@
 /*
   Cache-Control: public, max-age=3600
+
+# Avoid long-lived cached 404s after the page was first deployed
+/thank-you.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/thank-you
+  Cache-Control: public, max-age=0, must-revalidate
