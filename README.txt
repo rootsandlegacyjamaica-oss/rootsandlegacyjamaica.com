@@ -42,7 +42,7 @@ Cal.com booking + Google Calendar
 3. Create an Event type (e.g. “Consultation”) with duration, availability, and buffers as you like. Save.
 4. Open that event type → Share (or ⋮) → copy the public link (looks like https://cal.com/yourname/consultation).
 5. In this project, open booking-config.js and set CAL_BOOKING_URL to that full URL (no need to add ?embed=true; booking.js appends it). Save and redeploy.
-6. booking.html embeds Cal in an iframe. Styling: booking.js adds theme + brand color query params (CAL_EMBED_THEME, CAL_EMBED_BRAND_COLOR). For deeper control, use Cal.com → event type → ⋮ → Embed → “Embed Snippet Generator” (theme, layout, brand color, CSS variables). Replacing the whole UI with your own HTML would require the Cal.com API (availability + booking endpoints)—much more work than the embed.
+6. booking.html uses Cal.com’s **inline embed** (embed.js + Cal inline/ui). Configure `booking-config.js` (CAL_BOOKING_URL or CAL_CAL_LINK, theme, brand colors). For deeper control, use Cal.com → event type → ⋮ → Embed → “Embed Snippet Generator” and align options with booking-config.js.
 
 Google Meet for every booking (Cal.com + CLI)
 ----------------------------------------------
