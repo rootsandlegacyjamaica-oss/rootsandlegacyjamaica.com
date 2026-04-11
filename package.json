@@ -4,5 +4,12 @@
   "type": "module",
   "dependencies": {
     "resend": "^4.0.1"
+  },
+  "devDependencies": {
+    "calcom-cli": "^0.1.0"
+  },
+  "scripts": {
+    "cal:meet": "bash scripts/cal-setup-google-meet.sh",
+    "cal:meet-event": "bash scripts/cal-patch-event-google-meet.sh"
   }
 }

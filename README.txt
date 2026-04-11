@@ -15,6 +15,7 @@ Files included:
 - package.json (Netlify Functions + Resend)
 - netlify/functions/cal-booking-notification.mjs
 - netlify/functions/contact-notification.mjs
+- scripts/cal-setup-google-meet.sh, scripts/cal-patch-event-google-meet.sh (Google Meet via Cal.com CLI + API)
 - assets/
 
 Publishing:
@@ -41,7 +42,22 @@ Cal.com booking + Google Calendar
 3. Create an Event type (e.g. “Consultation”) with duration, availability, and buffers as you like. Save.
 4. Open that event type → Share (or ⋮) → copy the public link (looks like https://cal.com/yourname/consultation).
 5. In this project, open booking-config.js and set CAL_BOOKING_URL to that full URL (no need to add ?embed=true; booking.js appends it). Save and redeploy.
-6. booking.html embeds Cal in an iframe. The Cal.com CLI is optional and mainly used for self-hosted Cal.com development; for cal.com cloud, the web UI is enough.
+6. booking.html embeds Cal in an iframe.
+
+Google Meet for every booking (Cal.com + CLI)
+----------------------------------------------
+Meet links are created by Cal.com when the event type uses Google Meet (not something the website code generates).
+
+1. In Cal.com: App Store → install **Google Meet**. Connect **Google Calendar** (required for Meet on bookings).
+2. From this repo (install deps once: `npm install`), set your API key and run:
+     export CALCOM_API_KEY="cal_live_…"    # Settings → Developer → API keys
+     npm run cal:meet
+   That lists conferencing apps, sets **Google Meet** as your default conferencing app, and lists event types with ids.
+3. Pin Meet on your “30 min” (or any) event type:
+     export EVENT_TYPE_ID="<id from the list>"
+     npm run cal:meet-event
+   (Or in the UI: Event type → Location → Google Meet.)
+4. New bookings then get a Meet URL in the calendar event and in Cal.com emails / webhooks.
 
 If CAL_BOOKING_URL is empty, booking.html shows setup instructions instead of the calendar.
 
